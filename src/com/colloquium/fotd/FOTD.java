@@ -71,7 +71,7 @@ public class FOTD extends Activity {
                 baf.append((byte)current);
             }
             String text = new String(baf.toByteArray());
-            tv.setText(text);
+            tv.setText(fighter1 + " vs. " + fighter2 + "\n" + text);
 
 
         } catch(Exception e) {

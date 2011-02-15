@@ -5,8 +5,12 @@
     android:layout_height="fill_parent"
     >
 <TextView  
+    android:id="@+id/displayText"
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:text="@string/hello"
     />
+<EditText android:layout_height="wrap_content" android:text="Figher 1" android:id="@+id/fighter1" android:layout_width="fill_parent"></EditText>
+<EditText android:layout_height="wrap_content" android:text="Fighter 2" android:id="@+id/fighter2" android:layout_width="fill_parent"></EditText>
+<Button android:text="Fight!" android:id="@+id/fightButton" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
 </LinearLayout>

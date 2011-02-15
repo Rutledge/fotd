@@ -19,10 +19,13 @@ import org.apache.http.util.ByteArrayBuffer;
 public class FOTD extends Activity {
     TextView tv;
     Button fightButton;
-    EditText fighterText1;
-    EditText fighterText2;
+    EditText fighter1Text;
+    EditText fighter2Text;
 
-    /** Called when the activity is first created. */
+    /** Called when the activity is first created.
+     *
+     *   This initializes the views, text fields and buttons
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,13 +40,21 @@ public class FOTD extends Activity {
             {
                 commenceFight();
             }
-        })
+        });
 
     }
 
+    /**
+     * commenceFight is called whenever the "Fight" button is pushed.
+     * It gets the two text entries from the EditText fields, google
+     * searches for them, and displays who won
+     *
+     * Todo:Google search for two fields, decide who wins,
+     *      display that on the 'tv' text field
+     */
     public void commenceFight() {
-        String fighter1 = fighterText1.getText().toString();
-        String fighter2 = fighterText2.getText().toString();
+        String fighter1 = fighter1Text.getText().toString();
+        String fighter2 = fighter2Text.getText().toString();
 
         HttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost("http://www.google.com");
